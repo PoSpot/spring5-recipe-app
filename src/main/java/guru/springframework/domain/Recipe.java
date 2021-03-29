@@ -20,6 +20,8 @@ public class Recipe {
 
     @Lob
     private String directions;
+    //todo add
+    //private Difficulty difficulty;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
     private Set<Ingredient> ingredients = new HashSet<>();
@@ -44,7 +46,7 @@ public class Recipe {
         return id;
     }
 
-    // TODO setter on id?
+    // TODO setter on id? (everywhere)
     public void setId(Long id) {
         this.id = id;
     }
