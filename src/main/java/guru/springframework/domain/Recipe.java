@@ -3,9 +3,6 @@ package guru.springframework.domain;
 import javax.persistence.*;
 import java.util.Set;
 
-/**
- * Created by jt on 6/13/17.
- */
 @Entity
 public class Recipe {
 
@@ -30,6 +27,7 @@ public class Recipe {
     @Enumerated(value = EnumType.STRING)
     private Difficulty difficulty;
 
+    // TODO no mappedBy here?
     @OneToOne(cascade = CascadeType.ALL)
     private Notes notes;
 
@@ -43,6 +41,7 @@ public class Recipe {
         return id;
     }
 
+    // TODO setter on id?
     public void setId(Long id) {
         this.id = id;
     }
