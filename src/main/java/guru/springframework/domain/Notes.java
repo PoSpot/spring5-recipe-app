@@ -1,10 +1,6 @@
 package guru.springframework.domain;
 
 import javax.persistence.*;
-
-/**
- * Created by jt on 6/13/17.
- */
 @Entity
 public class Notes {
 
@@ -12,6 +8,7 @@ public class Notes {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    // no cascade - recipe owns it.
     @OneToOne
     private Recipe recipe;
 
