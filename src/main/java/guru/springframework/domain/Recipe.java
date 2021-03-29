@@ -17,6 +17,8 @@ public class Recipe {
     private String source;
     private String url;
     private String directions;
+    //todo add
+    //private Difficulty difficulty;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
     private Set<Ingredient> ingredients;
@@ -41,7 +43,7 @@ public class Recipe {
         return id;
     }
 
-    // TODO setter on id?
+    // TODO setter on id? (everywhere)
     public void setId(Long id) {
         this.id = id;
     }
